@@ -6,9 +6,8 @@ export const Input = () => {
 
     const [value, setValue] = useState('')
 
-    const {dispatch, state} = useContext(TodoContext)
+    const {state, dispatch} = useContext(TodoContext)
 
-    console.log(state)
     const handleSubmit = (e) => {
         e.preventDefault()
         if (value.trim()) {

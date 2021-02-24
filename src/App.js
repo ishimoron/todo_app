@@ -10,13 +10,7 @@ import useLocalStorageReducer from "./hooks/useLocalStorage";
 
 function App() {
 
-    // const [state, dispatch] = useReducer(TodoReducer, TodoState)
-
-    const [state, dispatch] = useLocalStorageReducer(
-        'state',
-        TodoReducer,
-        TodoState
-    );
+    const [state, dispatch] = useLocalStorageReducer('state', TodoReducer, TodoState);
 
     return (
         <TodoContext.Provider value={{state, dispatch}}>
@@ -28,8 +22,6 @@ function App() {
                 </Switch>
             </div>
         </TodoContext.Provider>
-
-
     );
 }
 

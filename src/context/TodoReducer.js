@@ -60,7 +60,7 @@ const TodoReducer = (state, action) => {
             return {
                 ...state,
             }
-            case "PRIORITY":
+        case "PRIORITY":
             const priority = state.todos.map(todo =>
                 todo.id === action.payload ? {...todo, priority: !todo.priority} : todo
             );
